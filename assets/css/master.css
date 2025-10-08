@@ -9,9 +9,9 @@
 /*----------------------------------------*/
 
 :root {
-    --primary: #CC0000;
-    --green-11: #770617;
-    --secondary: #2c2c2c;
+    --primary: #FE0000;
+    --green-11: #D40000;
+    --secondary: #5B5B5B;
     --black: #000;
     --black-2: #121212;
     --black-3: #555;
@@ -44,7 +44,7 @@
     --gray-15: #C0C0C0;
     --gray-16: #939393;
     --pink: #FAEDE9;
-    --pink-2: #FF9776;
+    --pink-2: #ff7676;
     --pink-12 : #fec195;
     --pink-3: #F3ECEC;
     --pink-4: #FFFAF0;
@@ -57,12 +57,16 @@
     --red-1-1 : #ff4655;
 }
 
-@font-face {
-    font-family: newYork;
-    src: url("/assets/fonts/newyork/FontsFree-Net-NewYork.ttf");
-    font-weight: 400;
+
+body {
+    /* Usando Ubuntu como fonte principal para textos */
+    font-family: 'Kanit', sans-serif;
 }
 
+h1, h2, h3 {
+    /* Usando Kanit para os títulos */
+    font-family: 'Ubuntu', sans-serif;
+}
 /*----------------------------------------*/
 
 /*  02. MIXIN CSS START
@@ -615,7 +619,7 @@
 }
 
 body {
-    font-family: "Kanit", sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
 
 html {
