@@ -60,7 +60,7 @@
 
 body {
     /* Usando Ubuntu como fonte principal para textos */
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h1, h2, h3 {
@@ -37695,7 +37695,7 @@ ul.mega-menu-2.woocomerce-megamenu {
 }
 
 .wishlist__title {
-    font-family: "Kanit", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
@@ -37734,7 +37734,7 @@ ul.mega-menu-2.woocomerce-megamenu {
 }
 
 .wishlist__price {
-    font-family: "Kanit", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
@@ -37742,7 +37742,7 @@ ul.mega-menu-2.woocomerce-megamenu {
 }
 
 .wishlist__hbtn {
-    font-family: "Kanit", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
