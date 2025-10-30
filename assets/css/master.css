@@ -41444,3 +41444,54 @@ ul.mega-menu-2.woocomerce-megamenu {
 .dark.dir-rtl .portfolio__about .brand-title-wrap {
     border-left: 1px solid var(--secondary);
 }
+
+/* ==================================
+   Botão Flutuante do WhatsApp
+===================================== */
+.whatsapp-float-button {
+    position: fixed;         /* Mantém o botão fixo na tela */
+    left: 20px;              /* Distância da esquerda */
+    bottom: 20px;            /* Distância de baixo */
+    
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: #FFFFFF;          /* Ícone em branco */
+    width: 60px;             /* Largura */
+    height: 60px;            /* Altura */
+    border-radius: 50%;      /* Deixa o botão redondo */
+    
+    display: flex;           /* Usado para centralizar o ícone */
+    align-items: center;     /* Alinha o ícone verticalmente */
+    justify-content: center; /* Alinha o ícone horizontalmente */
+    
+    font-size: 30px;         /* Tamanho do ícone */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 9999;           /* Garante que fique acima de outros elementos */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-float-button:hover {
+    transform: scale(1.1); /* Aumenta um pouco o tamanho */
+    background-color: #1b9e4b; /* Verde um pouco mais escuro */
+}
+
+/* ==================================
+   Ajuste para Celulares (Responsivo)
+===================================== */
+@media (max-width: 768px) {
+    .whatsapp-float-button {
+        width: 50px;       /* Botão um pouco menor no celular */
+        height: 50px;      /* Botão um pouco menor no celular */
+        font-size: 25px;   /* Ícone um pouco menor */
+        left: 15px;
+        bottom: 15px;
+    }
+
+    /* Ajuste opcional: 
+       Se o botão de "Voltar ao Topo" ficar muito perto no celular,
+       podemos ajustar ele também. 
+    */
+    .scroll-top {
+        bottom: 15px; /* Alinha com o botão do WhatsApp */
+    }
+}
