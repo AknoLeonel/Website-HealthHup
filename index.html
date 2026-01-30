@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Instituto BodyLife - Saúde Integrada, Fisioterapia, Estética Avançada, Nutrição e Medicina em Brasília.">
+    <meta name="description" content="Instituto BodyLife - Saúde Integrada, Fisioterapia, Nutrição e Estética Avançada em Brasília. Tecnologia de ponta e cuidado humanizado.">
     <meta name="author" content="Akno Tech">
 
     <title>Instituto BodyLife | Saúde Integrada e Performance</title>
@@ -19,163 +19,144 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/progressbar.css">
     <link rel="stylesheet" href="assets/css/meanmenu.min.css">
     <link rel="stylesheet" href="assets/css/master.css">
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* --- CORREÇÕES CRÍTICAS DE DESIGN E SOBREPOSIÇÃO --- */
+        /* --- ESTILIZAÇÃO CUSTOMIZADA AKNO TECH (OPTIMIZED 2.0) --- */
         :root {
-            --primary: #Fe0000;
-            --dark: #0e0e0e;
-            --gray-text: #555555;
-            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            --bl-red: #Fe0000;
+            --bl-dark: #0e0e0e;
+            --bl-gray: #f4f4f4;
+            --header-h: 90px;
+            --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        body { 
-            background-color: #ffffff; 
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
+        body { font-family: 'Ubuntu', sans-serif; background-color: #ffffff; color: #333; }
 
-        /* Fix para evitar espaços em branco no topo e z-index do header */
+        /* HEADER & NAVIGATION (Resolvendo erro mobile) */
         .header__area-3 {
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 1000 !important;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: 15px 0;
-        }
-
-        /* Botões Otimizados: Elegantes e clicáveis em mobile */
-        .btn-bodylife {
-            background: var(--primary);
-            color: #fff !important;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: inline-flex;
+            z-index: 9999 !important;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            height: var(--header-h);
+            display: flex;
             align-items: center;
-            gap: 10px;
-            border: 2px solid var(--primary);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
             transition: var(--transition);
         }
 
-        .btn-bodylife:hover {
-            background: transparent;
-            color: var(--primary) !important;
-            transform: translateY(-3px);
+        .header__inner-3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
         }
 
-        /* Hero Section: Resolvendo sobreposição de texto e imagem */
+        /* BOTÕES PREMIUM (Menores e Elegantes) */
+        .btn-bl {
+            background: var(--bl-red);
+            color: #fff !important;
+            padding: 10px 24px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 2px solid var(--bl-red);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .btn-bl:hover {
+            background: transparent;
+            color: var(--bl-red) !important;
+            transform: scale(1.05);
+        }
+
+        .btn-outline {
+            border: 2px solid #ddd;
+            padding: 10px 24px;
+            border-radius: 100px;
+            color: #333;
+            font-weight: 600;
+            font-size: 13px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--bl-red);
+            color: var(--bl-red);
+        }
+
+        /* HERO SECTION (Anti-Overlap) */
         .hero__area-3 {
-            padding-top: 140px;
+            padding-top: calc(var(--header-h) + 60px);
             padding-bottom: 80px;
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: #fff;
         }
 
         .hero__title-3 {
-            font-size: clamp(36px, 7vw, 80px);
-            line-height: 1.1;
-            font-weight: 700;
-            margin-bottom: 30px;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Grid de Especialidades - Layout em "Cards High-Tech" */
-        .spec-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 20px 0;
-        }
-
-        .spec-card {
-            background: #fff;
-            padding: 40px;
-            border-radius: 25px;
-            border: 1px solid #f0f0f0;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 380px;
-            z-index: 1;
-        }
-
-        .spec-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.05);
-            transform: translateY(-10px);
-        }
-
-        .spec-card i {
-            font-size: 40px;
-            color: var(--primary);
+            font-size: clamp(34px, 7vw, 85px);
+            line-height: 1.05;
+            font-weight: 800;
+            color: var(--bl-dark);
             margin-bottom: 25px;
         }
 
-        .spec-card h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--dark);
+        /* ESPECIALIDADES (Grade Futurista e Limpa) */
+        .specialty__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
         }
 
-        .spec-card ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
+        .specialty__card {
+            background: #fff;
+            padding: 45px;
+            border-radius: 30px;
+            border: 1px solid #f0f0f0;
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .spec-card ul li {
+        .specialty__card:hover {
+            border-color: var(--bl-red);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+            transform: translateY(-10px);
+        }
+
+        .specialty__card i { font-size: 38px; color: var(--bl-red); margin-bottom: 25px; }
+        .specialty__card h3 { font-size: 24px; font-weight: 700; margin-bottom: 20px; color: var(--bl-dark); }
+        
+        .list-unstyled li {
             font-size: 14px;
-            color: var(--gray-text);
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            color: #666;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .spec-card ul li::before {
-            content: "•";
-            color: var(--primary);
-            font-weight: bold;
-        }
+        .list-unstyled li::before { content: "•"; color: var(--bl-red); font-weight: 900; }
 
-        /* Banner de "Pronto para viver uma nova experiência" */
-        .cta-experience {
-            background: var(--dark);
-            border-radius: 40px;
-            padding: 80px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin: 60px 0;
-        }
-
-        /* Mobile First Responsivity */
-        @media (max-width: 991px) {
-            .hero__area-3 { padding-top: 100px; text-align: center; }
-            .hero__inner-3 { display: flex; flex-direction: column; align-items: center; }
-            .hero__title-3 { margin-bottom: 20px; }
-            .brand-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-        }
-
-        /* Fix para WhatsApp Float não cobrir conteúdo importante */
-        .whatsapp-fixed {
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
@@ -188,8 +169,30 @@
             align-items: center;
             justify-content: center;
             color: #fff;
-            font-size: 30px;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            font-size: 32px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        /* BANNER CTA EXPERIÊNCIA */
+        .banner-experience {
+            background: var(--bl-dark);
+            border-radius: 40px;
+            padding: 90px 40px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-experience h2 { font-size: clamp(30px, 5vw, 55px); font-weight: 800; line-height: 1.1; }
+
+        /* MOBILE FIRST REVISIONS */
+        @media (max-width: 991px) {
+            .hero__area-3 { text-align: center; padding-top: 130px; }
+            .hero__inner-3 { display: flex; flex-direction: column; align-items: center; }
+            .hero__cta-group { justify-content: center; width: 100%; gap: 15px; }
+            .btn-bl { width: 100%; justify-content: center; }
+            .brand-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
         }
     </style>
 </head>
@@ -198,46 +201,75 @@
     <div class="cursor1"></div>
     <div class="cursor2"></div>
 
-    <a href="https://wa.me/5561998796606" class="whatsapp-fixed" target="_blank" aria-label="Agendar via WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
     <div class="preloader">
         <div class="loading">
             <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+            <div class="bar bar4"></div>
+            <div class="bar bar5"></div>
+            <div class="bar bar6"></div>
+            <div class="bar bar7"></div>
             <div class="bar bar8"></div>
         </div>
     </div>
 
-    <header class="header__area-3 shadow-sm">
+    <div class="switcher__area">
+        <div class="switcher__icon">
+            <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+            <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="switcher__items">
+            <div class="switcher__item">
+                <div class="switch__title-wrap"><h2 class="switcher__title">Modo Visual</h2></div>
+                <div class="switcher__btn mode-type wc-col-2">
+                    <button class="active" data-mode="light">claro</button>
+                    <button data-mode="dark">escuro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="scroll_top" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <a href="https://wa.me/5561998796606" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <header class="header__area-3">
         <div class="container-fluid px-lg-5">
             <div class="header__inner-3">
                 <div class="header__logo-2">
-                    <a href="index.html" class="d-flex align-items-center gap-3 text-decoration-none">
-                        <img src="assets/imgs/logo/logobodylife.png" alt="Instituto BodyLife" width="50">
-                        <span class="d-none d-md-block" style="color:var(--primary); font-weight: 700; line-height: 1.1; font-size: 18px;">INSTITUTO <br> BODYLIFE</span>
+                    <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+                        <img src="assets/imgs/logo/logobodylife.png" alt="BodyLife" width="50">
+                        <div class="logo-text d-none d-sm-block">
+                            <span style="color:var(--bl-red); font-weight: 800; font-size: 16px; line-height: 1;">INSTITUTO <br> BODYLIFE</span>
+                        </div>
                     </a>
                 </div>
                 
                 <div class="header__nav-2">
                     <ul class="main-menu-3 menu-anim">
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="about.html">O Instituto</a></li>
-                        <li class="has-dropdown"><a href="service.html">Especialidades</a>
+                        <li><a href="index.html">INÍCIO</a></li>
+                        <li><a href="about.html">O INSTITUTO</a></li>
+                        <li class="has-dropdown"><a href="service.html">ESPECIALIDADES</a>
                             <ul class="main-dropdown">
                                 <li><a href="service.html">Fisioterapia</a></li>
-                                <li><a href="service.html">Estética Avançada</a></li>
+                                <li><a href="service.html">Estética</a></li>
                                 <li><a href="service.html">Nutrição</a></li>
-                                <li><a href="service.html">Pilates Clínico</a></li>
+                                <li><a href="service_app.html">Exames</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">Contato</a></li>
+                        <li><a href="ifteam.html">CORPO CLÍNICO</a></li>
+                        <li><a href="contact.html">CONTATO</a></li>
                     </ul>
                 </div>
 
-                <div class="header__nav-icon-3 d-flex align-items-center">
-                    <a href="https://wa.me/5561998796606" class="btn-bodylife d-none d-xl-flex">AGENDAR CONSULTA</a>
-                    <button id="open_offcanvas" class="ms-3"><img src="assets/imgs/icon/menu-black.png" alt="Menu"></button>
+                <div class="header__nav-icon-3 d-flex align-items-center gap-3">
+                    <a href="https://wa.me/5561998796606" class="btn-bl d-none d-xl-flex">AGENDAR CONSULTA</a>
+                    <button id="open_offcanvas" class="p-0 border-0 bg-transparent">
+                        <img src="assets/imgs/icon/menu-black.png" alt="Menu" width="32">
+                    </button>
                 </div>
             </div>
         </div>
@@ -261,8 +293,8 @@
                 <nav class="offcanvas__menu">
                     <ul class="menu-anim">
                         <li><a href="index.html">Início</a></li>
-                        <li><a href="about.html">Instituto</a></li>
-                        <li><a href="service.html">Especialidades</a></li>
+                        <li><a href="about.html">Sobre</a></li>
+                        <li><a href="service.html">Serviços</a></li>
                         <li><a href="contact.html">Contato</a></li>
                     </ul>
                 </nav>
@@ -276,157 +308,175 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <main>
-                
                 <section class="hero__area-3">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-7">
                                 <div class="hero__inner-3">
-                                    <h2 class="sec-sub-title fade_bottom">Cuidamos da sua Saúde em Brasília</h2>
-                                    <h1 class="hero__title-3 fade_bottom">SAÚDE QUE <br>MOVE O SEU <br><span style="color:var(--primary)">FUTURO.</span></h1>
-                                    <div class="hero__text-3">
-                                        <p class="fade_bottom" style="max-width: 500px; font-size: 18px; line-height: 1.6; color: #555; margin-bottom: 40px;">
-                                            Unimos Medicina, Fisioterapia e Performance para proporcionar a você uma vida sem limitações. Cuidado humanizado com tecnologia de ponta.
-                                        </p>
-                                        <div class="hero__cta-group d-flex gap-3 fade_bottom">
-                                            <a href="https://wa.me/5561998796606" class="btn-bodylife">MARCAR AVALIAÇÃO <i class="fa-solid fa-calendar-check"></i></a>
-                                            <a href="#especialidades" class="btn-outline-bl" style="border: 2px solid #ddd; padding: 12px 25px; border-radius: 50px; text-decoration: none; color: #333; font-weight: 600;">VER SERVIÇOS</a>
-                                        </div>
+                                    <h2 class="sec-sub-title fade_bottom">Bem-vindo à Saúde do Futuro em Brasília</h2>
+                                    <h1 class="hero__title-3 fade_bottom">CUIDAMOS DO <br>SEU CORPO EM <br><span style="color:var(--bl-red)">MOVIMENTO.</span></h1>
+                                    <p class="fade_bottom" style="max-width: 550px; font-size: 18px; color: #555; margin-bottom: 40px;">
+                                        O Instituto BodyLife integra Medicina, Fisioterapia e Performance para transformar sua vida através de resultados reais e humanizados.
+                                    </p>
+                                    <div class="hero__cta-group d-flex gap-3 fade_bottom">
+                                        <a href="https://wa.me/5561998796606" class="btn-bl py-4 px-4">AGENDAR AVALIAÇÃO <i class="fa-solid fa-calendar-check ms-2"></i></a>
+                                        <a href="#especialidades" class="btn-outline">VER ESPECIALIDADES</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 d-none d-lg-block">
-                                <div class="hero3-img-ani" data-speed="0.8">
-                                    <img src="assets/imgs/hero/3/1.jpeg" alt="Instituto BodyLife" class="w-100 shadow-lg" style="border-radius: 40px;">
+                            <div class="col-lg-5">
+                                <div class="hero3-img-ani mt-5 mt-lg-0" data-speed="0.8">
+                                    <img src="assets/imgs/hero/3/1.jpeg" alt="Instituto BodyLife" class="w-100 shadow-lg" style="border-radius: 40px; border: 1px solid #f0f0f0;">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="brand__area pb-100">
-                    <div class="container border-top pt-80">
-                        <p class="text-center mb-5 text-uppercase fw-bold text-muted" style="letter-spacing: 2px; font-size: 12px;">Parceiros e Convênios</p>
-                        <div class="brand-grid d-flex flex-wrap justify-content-center align-items-center gap-5 opacity-50">
-                            <img src="assets/imgs/brand/1.png" alt="Convênio" style="max-height: 35px; filter: grayscale(1);">
-                            <img src="assets/imgs/brand/2.png" alt="Convênio" style="max-height: 35px; filter: grayscale(1);">
-                            <img src="assets/imgs/brand/3.png" alt="Convênio" style="max-height: 35px; filter: grayscale(1);">
-                            <img src="assets/imgs/brand/4.png" alt="Convênio" style="max-height: 35px; filter: grayscale(1);">
-                            <img src="assets/imgs/brand/5.png" alt="Convênio" style="max-height: 35px; filter: grayscale(1);">
+                <section class="brand__area pt-80 pb-80" style="background: #fbfbfb;">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <p class="text-center mb-5 text-uppercase fw-bold opacity-50" style="letter-spacing: 2px; font-size: 12px;">Principais Parceiros & Convênios</p>
+                                <div class="brand-grid d-flex flex-wrap justify-content-center align-items-center gap-5 opacity-40">
+                                    <img src="assets/imgs/brand/1.png" alt="Convenio" style="max-height: 35px; filter: grayscale(1);">
+                                    <img src="assets/imgs/brand/2.png" alt="Convenio" style="max-height: 35px; filter: grayscale(1);">
+                                    <img src="assets/imgs/brand/3.png" alt="Convenio" style="max-height: 35px; filter: grayscale(1);">
+                                    <img src="assets/imgs/brand/4.png" alt="Convenio" style="max-height: 35px; filter: grayscale(1);">
+                                    <img src="assets/imgs/brand/5.png" alt="Convenio" style="max-height: 35px; filter: grayscale(1);">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="service__area-3 pb-120" id="especialidades">
+                <section class="service__area-3 pt-120 pb-120" id="especialidades">
                     <div class="container">
                         <div class="row mb-5 text-center">
                             <div class="col-lg-12">
                                 <div class="sec-title-wrapper">
-                                    <h2 class="sec-sub-title">Nossas Especialidades</h2>
-                                    <h3 class="sec-title">Cuidado Integrado para sua <span style="color:var(--primary)">Saúde.</span></h3>
+                                    <h2 class="sec-sub-title">Nossas Áreas de Atuação</h2>
+                                    <h3 class="sec-title">Tudo o que você precisa <br>em um só <span style="color:var(--bl-red)">Lugar.</span></h3>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="spec-container">
-                            <div class="spec-card fade_bottom">
+                        <div class="specialty__grid">
+                            <div class="specialty__card fade_bottom">
                                 <div>
-                                    <i class="fa-solid fa-sparkles"></i>
-                                    <h3>Estética</h3>
-                                    <ul>
-                                        <li>Botox e Preenchimento</li>
-                                        <li>Fios de PDO e Bioestimuladores</li>
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                    <h3>Estética Avançada</h3>
+                                    <ul class="list-unstyled">
+                                        <li>Botox e Preenchimentos</li>
+                                        <li>Bioestimuladores (Sculptra/Elleva)</li>
                                         <li>Ultraforme MPT</li>
-                                        <li>Lavieen / Pisom</li>
+                                        <li>Lavieen ou Pisom</li>
+                                        <li>Fios de PDO</li>
+                                        <li>Limpeza de Pele</li>
                                     </ul>
                                 </div>
-                                <a href="service.html" class="btn-outline-bl" style="display: block; text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 50px; text-decoration: none; color: #333;">Ver todos</a>
+                                <a href="service.html" class="btn-outline mt-4 d-block text-center">Ver Todos</a>
                             </div>
 
-                            <div class="spec-card fade_bottom" data-delay="0.2">
+                            <div class="specialty__card fade_bottom" data-delay="0.2">
                                 <div>
                                     <i class="fa-solid fa-person-walking-rehab"></i>
                                     <h3>Fisioterapia</h3>
-                                    <ul>
+                                    <ul class="list-unstyled">
                                         <li>Pélvica (Uroginecológica)</li>
-                                        <li>Traumato-ortopédica</li>
                                         <li>Cardiorespiratória</li>
                                         <li>Vestibular</li>
+                                        <li>Traumato-ortopédica</li>
                                     </ul>
                                 </div>
-                                <a href="service.html" class="btn-outline-bl" style="display: block; text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 50px; text-decoration: none; color: #333;">Ver detalhes</a>
+                                <a href="service.html" class="btn-outline mt-4 d-block text-center">Saiba Mais</a>
                             </div>
 
-                            <div class="spec-card fade_bottom" data-delay="0.4">
+                            <div class="specialty__card fade_bottom" data-delay="0.4">
                                 <div>
                                     <i class="fa-solid fa-apple-whole"></i>
                                     <h3>Nutrição</h3>
-                                    <ul>
+                                    <ul class="list-unstyled">
                                         <li>Esportiva e Performance</li>
-                                        <li>Funcional e Clínica</li>
-                                        <li>Terceira Idade</li>
-                                        <li>Emagrecimento Saudável</li>
+                                        <li>Nutrição Funcional</li>
+                                        <li>Clínica e Terceira Idade</li>
                                     </ul>
                                 </div>
-                                <a href="service.html" class="btn-outline-bl" style="display: block; text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 50px; text-decoration: none; color: #333;">Ver planos</a>
+                                <a href="service.html" class="btn-outline mt-4 d-block text-center">Ver Planos</a>
                             </div>
 
-                            <div class="spec-card fade_bottom">
+                            <div class="specialty__card fade_bottom">
                                 <div>
                                     <i class="fa-solid fa-kit-medical"></i>
                                     <h3>Clínica e Bem-Estar</h3>
-                                    <ul>
+                                    <ul class="list-unstyled">
                                         <li>Clínica Médica</li>
                                         <li>Acupuntura</li>
                                         <li>Pilates Clínico</li>
-                                        <li>Injetáveis</li>
+                                        <li>Protocolos Injetáveis</li>
                                     </ul>
                                 </div>
-                                <a href="service.html" class="btn-outline-bl" style="display: block; text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 50px; text-decoration: none; color: #333;">Conhecer mais</a>
+                                <a href="service.html" class="btn-outline mt-4 d-block text-center">Conhecer</a>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="container">
-                    <div class="cta-experience fade_bottom">
-                        <h2 class="text-white mb-4" style="font-size: clamp(28px, 4vw, 45px); font-weight: 700;">PRONTO PARA VIVER UMA <br><span style="color:var(--primary)">NOVA EXPERIÊNCIA?</span></h2>
-                        <p class="text-white opacity-50 mb-5" style="max-width: 600px; margin: 0 auto;">Sua saúde não pode esperar. Nossa equipe está pronta para desenhar seu plano de tratamento personalizado.</p>
-                        <a href="https://wa.me/5561998796606" class="btn-bodylife px-5 py-3">Falar com um Especialista Agora</a>
-                        
-                        <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: var(--primary); filter: blur(120px); opacity: 0.2;"></div>
+                <section class="workflow__area-3 pt-120 pb-120" style="background: #0b0b0b;">
+                    <div class="container">
+                        <div class="row align-items-center g-5">
+                            <div class="col-lg-6">
+                                <h2 class="sec-sub-title text-white">Experiência BodyLife</h2>
+                                <h3 class="sec-title text-white">Por que somos <br><span style="color:var(--bl-red)">Referência?</span></h3>
+                                <div class="row mt-5">
+                                    <div class="col-md-6 mb-4">
+                                        <h4 class="text-white h5"><i class="fa-solid fa-microchip me-2" style="color:var(--bl-red)"></i> Tecnologia</h4>
+                                        <p class="text-white-50 small">Protocolos modernos e aparelhos de última geração para recuperação rápida.</p>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <h4 class="text-white h5"><i class="fa-solid fa-user-doctor me-2" style="color:var(--bl-red)"></i> Especialistas</h4>
+                                        <p class="text-white-50 small">Corpo clínico multidisciplinar focado no seu resultado integral.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="workflow__img-3" data-speed="1.1">
+                                    <img src="assets/imgs/about/3/1.jpg" alt="Equipe" class="w-100 shadow" style="border-radius: 25px; filter: grayscale(0.6);">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <section class="faq__area-3 pb-120">
+                <section class="faq__area-3 pt-120 pb-120">
                     <div class="container">
                         <div class="row justify-content-center">
+                            <div class="col-lg-8 text-center mb-5">
+                                <h3 class="sec-title">Dúvidas Frequentes</h3>
+                            </div>
                             <div class="col-lg-10">
-                                <div class="sec-title-wrapper text-center mb-5">
-                                    <h3 class="sec-title">Dúvidas Comuns</h3>
-                                </div>
                                 <div class="accordion" id="faqInstituto">
                                     <div class="accordion-item mb-3 border-0 shadow-sm" style="border-radius: 20px;">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed p-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
-                                                Como funcionam os atendimentos por convênio?
+                                            <button class="accordion-button collapsed p-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                                                Como faço para agendar minha consulta?
                                             </button>
                                         </h2>
-                                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqInstituto">
+                                        <div id="f1" class="accordion-collapse collapse" data-bs-parent="#faqInstituto">
                                             <div class="accordion-body p-4 text-muted">
-                                                Atendemos Amil, Bradesco, Cassi, entre outros. Alguns serviços de Estética são apenas particulares, mas a Fisioterapia e Clínica Médica possuem ampla cobertura. Consulte nossa recepção para confirmar seu plano.
+                                                O agendamento é feito direto pelo WhatsApp ou telefone fixo. Nossa equipe de triagem irá te direcionar para o especialista ideal para o seu caso.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion-item mb-3 border-0 shadow-sm" style="border-radius: 20px;">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed p-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
-                                                Onde o Instituto está localizado?
+                                            <button class="accordion-button collapsed p-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+                                                Quais convênios o Instituto aceita?
                                             </button>
                                         </h2>
-                                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqInstituto">
+                                        <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqInstituto">
                                             <div class="accordion-body p-4 text-muted">
-                                                Estamos localizados no Guará I, Brasília-DF (QI 08 cj I LT 74). Possuímos estacionamento facilitado e um ambiente moderno para seu conforto.
+                                                Atendemos Bradesco, Amil, Cassi, Unimed e diversos outros. Algumas especialidades podem variar de acordo com o plano. Consulte nossa recepção.
                                             </div>
                                         </div>
                                     </div>
@@ -436,51 +486,58 @@
                     </div>
                 </section>
 
+                <section class="container pb-150">
+                    <div class="banner-experience fade_bottom">
+                        <h2 class="text-white mb-4">PRONTO PARA VIVER <br>UMA NOVA <span style="color:var(--bl-red)">JORNADA?</span></h2>
+                        <p class="text-white-50 mb-5" style="max-width: 600px; margin: 0 auto; font-size: 18px;">Sua saúde não pode esperar. Clique abaixo e fale com um especialista agora.</p>
+                        <a href="https://wa.me/5561998796606" class="btn-bl px-5 py-3" style="background:#fff; color:var(--bl-red) !important; border-color:#fff;">FALAR COM ESPECIALISTA AGORA <i class="fa-brands fa-whatsapp ms-2"></i></a>
+                        
+                        <div style="position: absolute; bottom: -50px; left: -50px; width: 250px; height: 250px; background: var(--bl-red); filter: blur(150px); opacity: 0.15; z-index: 0;"></div>
+                    </div>
+                </section>
             </main>
 
-            <footer class="footer__area-3 pt-120 pb-60" style="background: #fbfbfb;">
+            <footer class="footer__area-3 pt-120 pb-60" style="background: #fafafa; border-top: 1px solid #eee;">
                 <div class="container">
                     <div class="row g-5">
                         <div class="col-lg-4 col-md-6">
                             <div class="footer__logo mb-4">
-                                <img src="assets/imgs/logo/logobodylife.png" alt="Logo" width="60">
-                                <h2 class="mt-3" style="font-size: 24px; font-weight: 700; color: #111;">INSTITUTO <br> BODYLIFE</h2>
+                                <img src="assets/imgs/logo/logobodylife.png" alt="Logo" width="55">
+                                <h2 class="mt-3" style="font-size: 24px; font-weight: 800; color: #111;">INSTITUTO <br> BODYLIFE</h2>
                             </div>
-                            <p class="text-muted">Cuidado integrado e tecnologia de ponta para transformar sua saúde e performance.</p>
+                            <p class="text-muted">Centro de Saúde Integrada focado em promover movimento e qualidade de vida através de tratamentos modernos.</p>
                             <div class="social-links mt-4 d-flex gap-3">
-                                <a href="#" style="font-size: 20px; color: var(--dark);"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#" style="font-size: 20px; color: var(--dark);"><i class="fa-brands fa-youtube"></i></a>
-                                <a href="#" style="font-size: 20px; color: var(--dark);"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" style="font-size: 22px; color: #333;"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" style="font-size: 22px; color: #333;"><i class="fa-brands fa-youtube"></i></a>
                             </div>
                         </div>
                         
                         <div class="col-lg-4 col-md-6">
-                            <h4 class="mb-4 fw-bold">Especialidades</h4>
+                            <h4 class="mb-4 fw-bold">Nossas Áreas</h4>
                             <div class="row">
                                 <div class="col-6">
-                                    <ul style="list-style: none; padding: 0; font-size: 14px; line-height: 2;">
+                                    <ul class="list-unstyled p-0 m-0" style="line-height: 2.2;">
                                         <li><a href="#" class="text-muted text-decoration-none">Fisioterapia</a></li>
+                                        <li><a href="#" class="text-muted text-decoration-none">Estética</a></li>
                                         <li><a href="#" class="text-muted text-decoration-none">Nutrição</a></li>
-                                        <li><a href="#" class="text-muted text-decoration-none">Pilates</a></li>
-                                        <li><a href="#" class="text-muted text-decoration-none">Acupuntura</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-6">
-                                    <ul style="list-style: none; padding: 0; font-size: 14px; line-height: 2;">
-                                        <li><a href="#" class="text-muted text-decoration-none">Estética</a></li>
-                                        <li><a href="#" class="text-muted text-decoration-none">Injetáveis</a></li>
-                                        <li><a href="#" class="text-muted text-decoration-none">Clínica Médica</a></li>
+                                    <ul class="list-unstyled p-0 m-0" style="line-height: 2.2;">
+                                        <li><a href="#" class="text-muted text-decoration-none">Pilates</a></li>
+                                        <li><a href="#" class="text-muted text-decoration-none">Acupuntura</a></li>
+                                        <li><a href="#" class="text-muted text-decoration-none">Medicina</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-12">
-                            <h4 class="mb-4 fw-bold">Contato e Endereço</h4>
-                            <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2 text-danger"></i> QI 08 cj I LT 74 - Guará I, Brasília - DF</p>
+                            <h4 class="mb-4 fw-bold">Unidade Guará</h4>
+                            <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2 text-danger"></i> QI 08 cj I LT 74 - Brasília - DF</p>
                             <p class="text-muted mb-1"><i class="fa-solid fa-phone me-2 text-danger"></i> (61) 3055-2192</p>
                             <p class="text-muted mb-4"><i class="fa-brands fa-whatsapp me-2 text-danger"></i> (61) 99879-6606</p>
-                            <p class="small opacity-50">CRM Nº 30042 | RT: Dra. Nádyla Braz</p>
+                            <p class="small opacity-50">CRM Nº 30042 | MÉDICA RT - Dra. Nádyla Braz</p>
                         </div>
                     </div>
                     
@@ -502,7 +559,7 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        // Inicialização Estável do ScrollSmoother
+        // Inicialização Estável do ScrollSmoother para visual futurista
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
         
         let smoother = ScrollSmoother.create({
@@ -513,17 +570,18 @@
             smoothTouch: 0.1
         });
 
-        // Otimização Mobile: Remove animações pesadas de cursor
+        // Otimização: Remove cursores customizados em telas touch (Mobile)
         if ('ontouchstart' in window || window.innerWidth < 1024) {
-            $('.cursor1, .cursor2').remove();
+            document.querySelector('.cursor1').style.display = 'none';
+            document.querySelector('.cursor2').style.display = 'none';
         }
 
-        // Header Scroll Effect: Muda o padding ao rolar
+        // Header Control ao rolar a página
         $(window).scroll(function() {
-            if ($(this).scrollTop() > 50) {
-                $('.header__area-3').css({'padding': '10px 0', 'background': 'rgba(255,255,255,0.98)'});
+            if ($(this).scrollTop() > 80) {
+                $('.header__area-3').css({'height': '75px', 'background': 'rgba(255,255,255,0.99)'});
             } else {
-                $('.header__area-3').css({'padding': '20px 0', 'background': 'rgba(255,255,255,0.95)'});
+                $('.header__area-3').css({'height': '90px', 'background': 'rgba(255,255,255,0.98)'});
             }
         });
     </script>
